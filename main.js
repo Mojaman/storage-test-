@@ -38,7 +38,7 @@ document.getElementById("save").addEventListener("click", async () => {
   } catch (e) {
     console.error("保存失敗", e);
   }
-});
+
 
 // 🔹 5. 取得して表示
 const list = document.getElementById("list");
@@ -49,3 +49,5 @@ snapshot.forEach(doc => {
   li.textContent = doc.data().text;
   list.appendChild(li);
 });
+
+  });
