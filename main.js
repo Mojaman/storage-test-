@@ -27,14 +27,14 @@ const db = getFirestore(app);
 
 // 🔹 4. 保存ボタン
 document.getElementById("save").addEventListener("click", async () => {
-  console.log("ボタン押下");
+  alert("ボタン押下");
 
   try {
     await addDoc(collection(db, "messages"), {
       text: "こんにちは",
       time: Date.now()
     });
-    console.log("保存成功");
+    alert("保存成功");
   } catch (e) {
     console.error("保存失敗", e);
   }
